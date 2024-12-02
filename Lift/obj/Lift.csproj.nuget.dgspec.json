@@ -50,6 +50,40 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "ActualLab.Fusion": {
+              "target": "Package",
+              "version": "[9.6.2, )"
+            },
+            "ActualLab.Fusion.Blazor": {
+              "target": "Package",
+              "version": "[9.6.2, )"
+            },
+            "ActualLab.Fusion.Server": {
+              "target": "Package",
+              "version": "[9.6.2, )"
+            },
+            "ActualLab.Generators": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.6.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.20, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

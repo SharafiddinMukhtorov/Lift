@@ -1,4 +1,6 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="">Lift</a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
@@ -22,6 +24,16 @@
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="fetchdata">
                 <span class="oi oi-list-rich" aria-hidden="true"></span> Fetch data
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="elevator">
+                <span class="fa-solid fa-up-down fa-2x" aria-hidden="true"></span> <span style="padding-left: 20px;">Lift</span>
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="history">
+                <span class="fa-solid fa-clock-rotate-left fa-xl" aria-hidden="true"></span> <span style="padding-left: 10px;">Requests History</span>
             </NavLink>
         </div>
     </nav>

@@ -1,0 +1,95 @@
+﻿@page "/elevator"
+@using ActualLab.Fusion
+@using ActualLab.Fusion.Blazor
+@using ActualLab.Fusion.Extensions
+@using Lift.Models
+@using Lift.Services
+@inherits ComputedStateComponent<ElevatorState>
+
+@inject ElevatorService ElevatorService
+@inject IFusionTime Time
+@inject NavigationManager Nav
+
+@{
+    var state = State.ValueOrDefault;
+    var error = State.Error;
+}
+
+<h3 class="text-center">Lift Boshqaruvi</h3>
+
+@if (state != null)
+{
+    <div class="alert alert-info">
+        <p><strong>Joriy qavat:</strong> @state.CurrentFloor</p>
+        <p><strong>Yo‘nalish:</strong> @state.Direction</p>
+        <p><strong>Holati:</strong> @(state.IsBusy ? "Band" : "Bo‘sh")</p>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning">
+        <p>Holat yuklanmoqda...</p>
+    </div>
+}
+
+<h4 class="mt-4">Liftni yuborish</h4>
+<div class="d-flex justify-content-center align-items-center">
+    <div class="input-group" style="width: 200px;">
+        <input type="number" class="form-control" @bind="TargetFloor" min="1" max="10" placeholder="Qavatni kiriting" />
+        <button class="btn btn-primary" @onclick="SendElevator">Liftni yuborish</button>
+    </div>
+</div>
+
+@if (targetFloorIsInvalid)
+{
+    <div class="alert alert-danger mt-3" style="color: red;">
+        <strong>Xatolik!</strong> Qavat 1 va 10 oralig‘ida bo‘lishi shart.
+    </div>
+}
+
+@if (isElevatorRequested)
+{
+    <div class="alert alert-success mt-3">
+        Lift muvaffaqiyatli yuborildi!
+    </div>
+}
+
+@code {
+    private int TargetFloor { get; set; }
+    private bool targetFloorIsInvalid = false;
+    private bool isElevatorRequested = false;
+
+    // ComputeState will be called automatically by Fusion when the state changes
+    protected override async Task<ElevatorState?> ComputeState(CancellationToken cancellationToken)
+    {
+        var elevatorState = await ElevatorService.GetCurrentElevatorState();
+        return elevatorState;
+    }
+
+    private async Task SendElevator()
+    {
+        if (TargetFloor < 1 || TargetFloor > 10)
+        {
+            targetFloorIsInvalid = true;
+            StateHasChanged();
+            return;
+        }
+
+        targetFloorIsInvalid = false;
+        isElevatorRequested = false;
+
+        // Request the elevator to move to the target floor
+        ElevatorService.RequestElevator(TargetFloor);
+
+        // Set the elevator as requested for UI feedback
+        isElevatorRequested = true;
+        await InvokeAsync(StateHasChanged);
+
+        // Delay for 2 seconds to simulate elevator processing (can be replaced with real time)
+        await Task.Delay(2000);
+
+        // Reset the requested flag after the delay
+        isElevatorRequested = false;
+        await InvokeAsync(StateHasChanged);
+    }
+}

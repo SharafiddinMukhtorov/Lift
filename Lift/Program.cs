@@ -1,6 +1,13 @@
+using ActualLab.Fusion.UI;
+using ActualLab.Fusion;
 using Lift.Data;
+using Lift.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
+using Microsoft.EntityFrameworkCore;
+using ActualLab.Fusion.Extensions;
+using Lift.Infrastructure;
+using ActualLab.Fusion.Blazor;
 
 namespace Lift
 {
@@ -14,6 +21,23 @@ namespace Lift
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
+
+            var connectionString = builder.Configuration.GetConnectionString("ElevatorDb");
+            builder.Services.AddDbContext<ElevatorDbContext>(options =>
+                options.UseNpgsql(connectionString));
+
+
+            var fusion = builder.Services.AddFusion();
+            fusion.AddBlazor();
+            fusion.AddFusionTime();
+            fusion.AddService<ElevatorService>();
+            fusion.AddService<CounterService>();
+
+            builder.Services.AddScoped<ElevatorService>();
+
+
+            builder.Services.AddHttpContextAccessor();
+
 
             var app = builder.Build();
 
