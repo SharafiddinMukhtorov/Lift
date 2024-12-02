@@ -3,6 +3,30 @@
   "WorkspaceRootPath": "C:\\Tasks\\Lift\\Lift\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\lift.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:lift.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\pages\\requestshistory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:pages\\requestshistory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\pages\\elevator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:pages\\elevator.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:services\\counterservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:pages\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\pages\\requestshistory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:pages\\requestshistory.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\shared\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -51,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Infrastructure\\Migrations\\20241202051833_Initial_Create.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|c:\\tasks\\lift\\lift\\models\\elevatorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1E500123-1EAE-4F70-8DC9-01C249F3D04B}|Lift.csproj|solutionrelative:models\\elevatorrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -66,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +94,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
+              "Title": "Lift",
+              "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Lift.csproj",
+              "RelativeDocumentMoniker": "Lift.csproj",
+              "ToolTip": "C:\\Tasks\\Lift\\Lift\\Lift.csproj",
+              "RelativeToolTip": "Lift.csproj",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAABUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-12-02T09:05:27.448Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Tasks\\Lift\\Lift\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2024-12-02T09:02:22.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Tasks\\Lift\\Lift\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-02T08:40:01.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "CounterService.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Services\\CounterService.cs",
               "RelativeDocumentMoniker": "Services\\CounterService.cs",
@@ -95,7 +146,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "Error.cshtml",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Pages\\Error.cshtml",
               "RelativeDocumentMoniker": "Pages\\Error.cshtml",
@@ -108,7 +159,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Index.razor",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Pages\\Index.razor",
               "RelativeDocumentMoniker": "Pages\\Index.razor",
@@ -121,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "NavMenu.razor",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Shared\\NavMenu.razor",
               "RelativeDocumentMoniker": "Shared\\NavMenu.razor",
@@ -134,13 +185,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "RequestsHistory.razor",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Pages\\RequestsHistory.razor",
               "RelativeDocumentMoniker": "Pages\\RequestsHistory.razor",
               "ToolTip": "C:\\Tasks\\Lift\\Lift\\Pages\\RequestsHistory.razor",
               "RelativeToolTip": "Pages\\RequestsHistory.razor",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwDgAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-02T05:22:57.498Z",
               "EditorCaption": ""
@@ -153,27 +204,27 @@
               "RelativeDocumentMoniker": "Pages\\Counter.razor",
               "ToolTip": "C:\\Tasks\\Lift\\Lift\\Pages\\Counter.razor",
               "RelativeToolTip": "Pages\\Counter.razor",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-02T05:20:20.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "Elevator.razor",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Pages\\Elevator.razor",
               "RelativeDocumentMoniker": "Pages\\Elevator.razor",
-              "ToolTip": "C:\\Tasks\\Lift\\Lift\\Pages\\Elevator.razor*",
-              "RelativeToolTip": "Pages\\Elevator.razor*",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAYwFEAAAA1AAAAAAAAAA==",
+              "ToolTip": "C:\\Tasks\\Lift\\Lift\\Pages\\Elevator.razor",
+              "RelativeToolTip": "Pages\\Elevator.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-02T05:20:17.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "20241202051833_Initial_Create.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Infrastructure\\Migrations\\20241202051833_Initial_Create.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20241202051833_Initial_Create.cs",
@@ -186,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -199,25 +250,25 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Tasks\\Lift\\Lift\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2024-12-02T05:14:34.865Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 7,
               "Title": "ElevatorService.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Services\\ElevatorService.cs",
               "RelativeDocumentMoniker": "Services\\ElevatorService.cs",
-              "ToolTip": "C:\\Tasks\\Lift\\Lift\\Services\\ElevatorService.cs*",
-              "RelativeToolTip": "Services\\ElevatorService.cs*",
+              "ToolTip": "C:\\Tasks\\Lift\\Lift\\Services\\ElevatorService.cs",
+              "RelativeToolTip": "Services\\ElevatorService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T05:09:50.88Z",
@@ -225,7 +276,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ElevatorDbContext.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Infrastructure\\ElevatorDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\ElevatorDbContext.cs",
@@ -238,7 +289,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ElevatorRequest.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Models\\ElevatorRequest.cs",
               "RelativeDocumentMoniker": "Models\\ElevatorRequest.cs",
@@ -251,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "ElevatorState.cs",
               "DocumentMoniker": "C:\\Tasks\\Lift\\Lift\\Models\\ElevatorState.cs",
               "RelativeDocumentMoniker": "Models\\ElevatorState.cs",
