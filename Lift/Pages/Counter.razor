@@ -1,46 +1,18 @@
 ﻿@page "/counter"
-@using System.Threading
-@using ActualLab.Fusion.Blazor
-@using ActualLab.Fusion.Extensions
-@using Lift.Services
-@inherits ComputedStateComponent<string>
-@inject CounterService CounterService
-@inject IFusionTime Time
-@inject NavigationManager Nav
 
-@{
-    var state = State.ValueOrDefault;
-    var error = State.Error;
-}
+<PageTitle>Counter</PageTitle>
 
 <h1>Counter</h1>
 
-<div class="alert alert-primary">
-    Open this page in <a href="@Nav.Uri" target="_blank">another window</a> to see it updates in sync.
-</div>
-@if (error != null)
-{
-    <div class="alert alert-warning" role="alert">Update error: @error.Message</div>
-}
+<p role="status">Current count: @currentCount</p>
 
-<p>Count: @state</p>
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
-<button class="btn btn-primary" @onclick="Increment">Increment</button>
-<button class="btn btn-primary" @onclick="Decrement">Decrement</button>
 @code {
-    protected override async Task<string> ComputeState(CancellationToken cancellationToken)
-    {
-        var (count, changeTime) = await CounterService.Get();
-        var momentsAgo = await Time.GetMomentsAgo(changeTime);
-        return $"{count}, changed {momentsAgo}";
-    }
+    private int currentCount = 0;
 
-    private async Task Increment()
+    private void IncrementCount()
     {
-        await CounterService.Increment();
-    }
-    private async Task Decrement()
-    {
-        await CounterService.Decrement();
+        currentCount++;
     }
 }
