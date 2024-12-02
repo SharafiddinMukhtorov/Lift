@@ -30,3 +30,15 @@ This project is an Elevator Control System developed using Blazor, Fusion for re
 - ![image](https://github.com/user-attachments/assets/6d4ccd11-8a23-4cfa-9d53-f902f83a99d0)
 ![image](https://github.com/user-attachments/assets/608f6c7e-586f-458e-9c3c-f8ee6df51c35)
 
+## Changes
+- **docker-compose.yml**: Added a Docker Compose configuration to set up the C# application and PostgreSQL database in separate containers.
+- **PostgreSQL Configuration**: The PostgreSQL container is configured with necessary environment variables for user, password, and database.
+- **C# App Configuration**: The application is set to use the PostgreSQL database connection string from environment variables.
+- ![image](https://github.com/user-attachments/assets/18e50459-e051-4df0-a7c9-5ea83980b8d3)
+
+
+## How to Use Docker Compose
+
+### Prerequisites
+- **Docker**: Ensure Docker Desktop is installed and running. For Windows, download it from [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+- **Docker Compose**: Docker Compose comes bundled with Docker Desktop, so you don’t need to install it separately.
