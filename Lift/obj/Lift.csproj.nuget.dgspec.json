@@ -59,6 +59,10 @@
               "target": "Package",
               "version": "[9.6.2, )"
             },
+            "ActualLab.Fusion.EntityFramework.Npgsql": {
+              "target": "Package",
+              "version": "[9.6.2, )"
+            },
             "ActualLab.Fusion.Server": {
               "target": "Package",
               "version": "[9.6.2, )"

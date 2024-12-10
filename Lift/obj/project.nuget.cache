@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tR+8hmaBS4s=",
+  "dgSpecHash": "irLB2gOW1Eo=",
   "success": true,
   "projectFilePath": "C:\\Tasks\\Lift\\Lift\\Lift.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion\\9.6.2\\actuallab.fusion.9.6.2.nupkg.sha512",
     "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion.blazor\\9.6.2\\actuallab.fusion.blazor.9.6.2.nupkg.sha512",
     "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion.entityframework\\9.6.2\\actuallab.fusion.entityframework.9.6.2.nupkg.sha512",
+    "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion.entityframework.npgsql\\9.6.2\\actuallab.fusion.entityframework.npgsql.9.6.2.nupkg.sha512",
     "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion.ext.contracts\\9.6.2\\actuallab.fusion.ext.contracts.9.6.2.nupkg.sha512",
     "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion.ext.services\\9.6.2\\actuallab.fusion.ext.services.9.6.2.nupkg.sha512",
     "C:\\Users\\shara\\.nuget\\packages\\actuallab.fusion.server\\9.6.2\\actuallab.fusion.server.9.6.2.nupkg.sha512",

@@ -76,3 +76,4 @@ C:\Tasks\Lift\Lift\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
 C:\Tasks\Lift\Lift\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Tasks\Lift\Lift\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
 C:\Tasks\Lift\Lift\obj\Debug\net7.0\Lift.MvcApplicationPartsAssemblyInfo.cs
+C:\Tasks\Lift\Lift\bin\Debug\net7.0\ActualLab.Fusion.EntityFramework.Npgsql.dll

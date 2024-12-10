@@ -54,7 +54,7 @@
 
     private async Task LoadHistory()
     {
-        ElevatorRequests = ElevatorService.GetElevatorRequests();
+        ElevatorRequests = ElevatorService.GetElevatorRequests(new CancellationToken());
         StateHasChanged();
     }
 }

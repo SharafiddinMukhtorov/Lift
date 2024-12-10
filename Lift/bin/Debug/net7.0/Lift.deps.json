@@ -10,6 +10,7 @@
         "dependencies": {
           "ActualLab.Fusion": "9.6.2",
           "ActualLab.Fusion.Blazor": "9.6.2",
+          "ActualLab.Fusion.EntityFramework.Npgsql": "9.6.2",
           "ActualLab.Fusion.Server": "9.6.2",
           "ActualLab.Generators": "9.6.2",
           "Microsoft.EntityFrameworkCore": "7.0.20",
@@ -100,6 +101,18 @@
         },
         "runtime": {
           "lib/net7.0/ActualLab.Fusion.EntityFramework.dll": {
+            "assemblyVersion": "9.6.2.54003",
+            "fileVersion": "9.6.2.54003"
+          }
+        }
+      },
+      "ActualLab.Fusion.EntityFramework.Npgsql/9.6.2": {
+        "dependencies": {
+          "ActualLab.Fusion.EntityFramework": "9.6.2",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "7.0.18"
+        },
+        "runtime": {
+          "lib/net7.0/ActualLab.Fusion.EntityFramework.Npgsql.dll": {
             "assemblyVersion": "9.6.2.54003",
             "fileVersion": "9.6.2.54003"
           }
@@ -849,6 +862,13 @@
       "sha512": "sha512-XzppGG3NI2aQJ6JI7qa0JMZ+NxuMoT0YCSwfc80i/lh/0P5yxjZ4QeIYGTaB3PZNL0ZU75MwVWtMZMV3SwQXIQ==",
       "path": "actuallab.fusion.entityframework/9.6.2",
       "hashPath": "actuallab.fusion.entityframework.9.6.2.nupkg.sha512"
+    },
+    "ActualLab.Fusion.EntityFramework.Npgsql/9.6.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oxZbUtWfjWAcHZaZIsVf2Po8GJ18xLHOgGPPAxGa+sQXeY7b/ZR+wZd6ROSgrGNzV5DuoZ/K9of3DY3bsm1fzQ==",
+      "path": "actuallab.fusion.entityframework.npgsql/9.6.2",
+      "hashPath": "actuallab.fusion.entityframework.npgsql.9.6.2.nupkg.sha512"
     },
     "ActualLab.Fusion.Ext.Contracts/9.6.2": {
       "type": "package",

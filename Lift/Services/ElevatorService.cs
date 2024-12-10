@@ -1,72 +1,67 @@
-﻿using ActualLab.Fusion;
+﻿using ActualLab.CommandR;
+using ActualLab.CommandR.Configuration;
+using ActualLab.Fusion;
+using ActualLab.Fusion.EntityFramework;
 using Lift.Infrastructure;
+using Lift.Interface;
 using Lift.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Reactive;
 
 namespace Lift.Services
 {
-    public class ElevatorService : IComputeService
+    public class ElevatorService : DbServiceBase<ElevatorDbContext>, IElevatorService
     {
-        private readonly ElevatorDbContext _context;
-        private readonly object _locker = new object();
-        public ElevatorService(ElevatorDbContext context)
-        {
-            _context = context;
-        }
+        public ElevatorService(IServiceProvider serviceProvider) : base(serviceProvider) { }
 
         [ComputeMethod]
-        public virtual Task<ElevatorState?> GetCurrentElevatorState()
+        public virtual async Task<ElevatorState?> GetCurrentElevatorStateAsync(CancellationToken cancellation = default)
         {
-            lock (_locker)
-            {
-                var result = _context.ElevatorStates.OrderBy(e => e.Id).FirstOrDefault();
+            var _context = await DbHub.CreateDbContext(cancellation).ConfigureAwait(false);
 
-                return Task.FromResult(result);
+            if (_context == null)
+            {
+                throw new Exception("DbContext yaratishda xato yuz berdi.");
             }
+
+            var result = await _context.ElevatorStates
+                .OrderBy(e => e.Id)
+                .FirstOrDefaultAsync(cancellation);
+
+            return result;
         }
 
-        public Task RequestElevator(int targetFloor)
+        [CommandHandler]
+        public virtual async Task RequestElevator(CommandForAdd command, CancellationToken cancellationToken = default)
         {
-            lock (_locker)
+            var _context = await DbHub.CreateOperationDbContext(cancellationToken).ConfigureAwait(false);
+            await using var _1 = _context.ConfigureAwait(false);
+
+            int targetFloor = command.targetFloor;
+
+            var elevatorState = _context.ElevatorStates.OrderBy(e => e.Id).FirstOrDefault();
+            if (elevatorState != null)
             {
-                var request = new ElevatorRequest
-                {
-                    RequestedFloor = targetFloor,
-                    RequestTime = DateTime.UtcNow.AddHours(5),
-                };
-                _context.ElevatorRequests.Add(request);
-                _context.SaveChanges();
+                elevatorState.Direction = elevatorState.CurrentFloor > targetFloor ? "Pastga" : "Tepaga";
+                elevatorState.CurrentFloor = targetFloor;
+                elevatorState.IsBusy = false;
 
-                var elevatorState = _context.ElevatorStates.OrderBy(e => e.Id).FirstOrDefault();
-                if (elevatorState != null)
-                {
-                    elevatorState.Direction = elevatorState.CurrentFloor > targetFloor ? "Pastga" : "Tepaga";
-                    elevatorState.CurrentFloor = targetFloor;
-                    elevatorState.IsBusy = true;
-
-                    _context.ElevatorStates.Update(elevatorState);
-                    _context.SaveChanges();
-
-                    elevatorState.IsBusy = false;
-
-                    _context.ElevatorStates.Update(elevatorState);
-                    _context.SaveChanges();
-                }
+                _context.ElevatorStates.Update(elevatorState);
+                await _context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
             }
-
             using (Invalidation.Begin())
             {
-                GetCurrentElevatorState();
+                await GetCurrentElevatorStateAsync(cancellationToken);
             }
-
-            return Task.CompletedTask;
         }
 
-        public List<ElevatorRequest> GetElevatorRequests()
+        public List<ElevatorRequest> GetElevatorRequests(CancellationToken cancellationToken)
         {
-            lock (_locker)
-            {
-                return _context.ElevatorRequests.OrderByDescending(r => r.RequestTime).ToList();
-            }
+            var _context = DbHub.CreateOperationDbContext(cancellationToken);
+
+            //return _context.ElevatorRequests.OrderByDescending(r => r.RequestTime).ToList();
+            return null;
         }
     }
+    public record CommandForAdd(int targetFloor) : ICommand<Unit>;
 }

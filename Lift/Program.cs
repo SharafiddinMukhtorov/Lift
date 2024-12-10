@@ -1,13 +1,12 @@
-using ActualLab.Fusion.UI;
 using ActualLab.Fusion;
-using Lift.Data;
-using Lift.Services;
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.EntityFrameworkCore;
-using ActualLab.Fusion.Extensions;
-using Lift.Infrastructure;
 using ActualLab.Fusion.Blazor;
+using ActualLab.Fusion.EntityFramework;
+using ActualLab.Fusion.EntityFramework.Npgsql;
+using ActualLab.Fusion.Extensions;
+using Lift.Data;
+using Lift.Infrastructure;
+using Lift.Services;
+using Microsoft.EntityFrameworkCore;
 
 namespace Lift
 {
@@ -17,24 +16,39 @@ namespace Lift
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
             builder.Services.AddSingleton<WeatherForecastService>();
 
-            var connectionString = builder.Configuration.GetConnectionString("ElevatorDb");
-            builder.Services.AddDbContext<ElevatorDbContext>(options =>
-                options.UseNpgsql(connectionString));
-
+            builder.Services.AddDbContextServices<ElevatorDbContext>(db =>
+            {
+                db.AddOperations(operations =>
+                {
+                    operations.ConfigureOperationLogReader(_ => new()
+                    {
+                        CheckPeriod = TimeSpan.FromSeconds(5),
+                    });
+                    operations.ConfigureEventLogReader(_ => new()
+                    {
+                        CheckPeriod = TimeSpan.FromSeconds(5),
+                    });
+                    operations.AddNpgsqlOperationLogWatcher();
+                });
+                db.Services.AddTransientDbContextFactory<ElevatorDbContext>((c, db) =>
+                {
+                    db.UseNpgsql(builder.Configuration.GetConnectionString("ElevatorDb"), npgsql =>
+                    {
+                        npgsql.EnableRetryOnFailure(0);
+                    });
+                    db.UseNpgsqlHintFormatter();
+                });
+            });
 
             var fusion = builder.Services.AddFusion();
             fusion.AddBlazor();
             fusion.AddFusionTime();
             fusion.AddService<ElevatorService>();
-            fusion.AddService<CounterService>();
-
-            builder.Services.AddScoped<ElevatorService>();
-
+            fusion.AddOperationReprocessor();
 
             builder.Services.AddHttpContextAccessor();
 

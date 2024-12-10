@@ -1,4 +1,6 @@
 ﻿@page "/elevator"
+@using ActualLab.CommandR
+@using ActualLab.CommandR.Internal
 @using ActualLab.Fusion
 @using ActualLab.Fusion.Blazor
 @using ActualLab.Fusion.Extensions
@@ -9,6 +11,7 @@
 @inject ElevatorService ElevatorService
 @inject IFusionTime Time
 @inject NavigationManager Nav
+@inject ICommander Commander
 
 @{
     var state = State.ValueOrDefault;
@@ -59,10 +62,9 @@ else
     private bool targetFloorIsInvalid = false;
     private bool isElevatorRequested = false;
 
-    // ComputeState will be called automatically by Fusion when the state changes
     protected override async Task<ElevatorState?> ComputeState(CancellationToken cancellationToken)
     {
-        var elevatorState = await ElevatorService.GetCurrentElevatorState();
+        var elevatorState = await ElevatorService.GetCurrentElevatorStateAsync();
         return elevatorState;
     }
 
@@ -78,18 +80,12 @@ else
         targetFloorIsInvalid = false;
         isElevatorRequested = false;
 
-        // Request the elevator to move to the target floor
-        ElevatorService.RequestElevator(TargetFloor);
+        await Commander.Call(new CommandForAdd(TargetFloor));
 
-        // Set the elevator as requested for UI feedback
         isElevatorRequested = true;
-        await InvokeAsync(StateHasChanged);
 
-        // Delay for 2 seconds to simulate elevator processing (can be replaced with real time)
         await Task.Delay(2000);
 
-        // Reset the requested flag after the delay
         isElevatorRequested = false;
-        await InvokeAsync(StateHasChanged);
     }
 }
